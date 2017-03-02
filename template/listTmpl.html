@@ -1,0 +1,20 @@
+
+<div class="container">
+
+  <div ng-show="list.image" ng-repeat="list in lists">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img width="auto" height="100" ng-src="{{list.image.small_url}}" alt="">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p> {{ list.name }} </p>
+        </div>
+        <div class="card-action">
+          <a href="#">MORE INFO</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

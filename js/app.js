@@ -1,6 +1,7 @@
 angular.module("karbonPrint", ['ui.router'])
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $sceProvider) {
+    $sceProvider.enabled(false)
     $urlRouterProvider.otherwise("/")
     $stateProvider
 
@@ -13,11 +14,19 @@ angular.module("karbonPrint", ['ui.router'])
       .state('game', {
         url: '/game',
         templateUrl: "../template/gameTmpl.html",
+        controller: 'gameCtrl'
       })
 
       .state('user', {
         url: '/user',
         templateUrl: "../template/userTmpl.html",
+        controller: 'userCtrl'
+      })
+
+      .state('list', {
+        url: '/list',
+        templateUrl: "../template/listTmpl.html",
+        controller: 'listCtrl'
       })
 
 
