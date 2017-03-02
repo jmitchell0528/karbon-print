@@ -1,0 +1,22 @@
+<!-- <div ng-show="user.avatar" ng-repeat="user in users">
+  <img width="auto" height="100" ng-src="{{user.avatar}}" alt="">
+  <h1> {{ user.username }} </h1>
+</div> -->
+
+<div class="container">
+  <div ng-show="user.avatar" ng-repeat="user in users">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img width="auto" height="100" ng-src="{{user.avatar}}" alt="">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p> {{ user.username }} </p>
+        </div>
+        <div class="card-action">
+          <a href="#">ADD AS A FRIEND</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
