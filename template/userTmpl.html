@@ -2,19 +2,29 @@
   <img width="auto" height="100" ng-src="{{user.avatar}}" alt="">
   <h1> {{ user.username }} </h1>
 </div> -->
+<div class="row">
+  <form class="transparent col s12 m6 l3 right">
+    <div class="input-field transparent">
+      <input id="search" type="search" required class="transparent" ng-model="userFilter.username">
+      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      <i class="material-icons">close</i>
+    </div>
+  </form>
+</div>
 
 <div class="container">
-  <div ng-show="user.avatar" ng-repeat="user in users">
-    <div class="card horizontal">
+  <div ng-show="user.avatar" ng-repeat="user in users | filter: userFilter">
+    <div class="card horizontal grey darken-3">
       <div class="card-image">
         <img width="auto" height="100" ng-src="{{user.avatar}}" alt="">
       </div>
       <div class="card-stacked">
-        <div class="card-content">
+        <div class="card-content white-text">
           <p> {{ user.username }} </p>
         </div>
         <div class="card-action">
-          <a href="#">TAG AS A FRIEND</a>
+          <!-- <a href="#">TAG AS A FRIEND</a> -->
+          <a class="waves-effect waves-orange darken-2 btn-flat" onclick="Materialize.toast('TAG SENT!', 3000)">TAG AS A FRIEND</a>
         </div>
       </div>
     </div>

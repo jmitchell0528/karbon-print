@@ -8,43 +8,82 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
+
+
+
   <body ng-controller="mainCtrl">
+
 
     <main>
       <nav class="grey darken-3">
         <div class="container">
           <div class="nav-wrapper">
-            <a ui-sref="home" class="brand-logo">KarbonPrint</a>
+            <a ui-sref="home" class="brand-logo"><i class="material-icons">thumb_up</i>KarbonPrint</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a ui-sref="home">Home</a></li>
-                <li><a ui-sref="game">Games</a></li>
+                <!-- <li><a ui-sref="home">Home</a></li> -->
+                <!-- <li><a ui-sref="game">Games</a></li> -->
+                <li><a ui-sref="list">Games</a></li>
                 <li><a ui-sref="user">Users</a></li>
-                <li><a ui-sref="list">List</a></li>
-                <li><a class="waves-effect waves-light orange darken-4 white-text btn">SIGN IN/ JOIN</a></li>
+                  <button data-target="modal1" class="modal-trigger waves-effect waves-light btn orange darken-4 white-text">SIGN IN/ JOIN</button>
+                  <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <div class="container">
+                        <div class="row">
+                          <form class="col l6">
+                            <div class="row">
+                              <div class="input-field col l6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                              </div>
+                              <div class="input-field col l6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s6">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s6">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col l6">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                </div>
+              </div>
+                  </div>
+                </li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                <li><a ui-sref="home">Home</a></li>
-                <li><a ui-sref="game">Games</a></li>
+                <!-- <li><a ui-sref="home">Home</a></li> -->
+                <!-- <li><a ui-sref="game">Games</a></li> -->
+                <li><a ui-sref="list">Games</a></li>
                 <li><a ui-sref="user">Users</a></li>
-                <li><a ui-sref="list">List</a></li>
               </ul>
           </div>
         </div>
       </nav>
 
-    <div class="row">
-      <form class="transparent col s12 m6 l3 right">
-        <div class="input-field transparent">
-          <input id="search" type="search" required class="transparent">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-    </div>
 
 
-      <ui-view></ui-view>
+<ui-view></ui-view>
+
+
 
       <footer class="page-footer grey darken-3">
          <div class="container">
@@ -72,6 +111,8 @@
          </div>
        </footer>
     </main>
+
+
 
   <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"

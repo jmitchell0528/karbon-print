@@ -1,16 +1,22 @@
 <!-- <div class="container"> -->
+<div ng-controller="gameCtrl">
 
   <div class="row center-align">
-
     <div class="col m3">
       <div class="card grey darken-3">
         <div class="card-content white-text">
+          <div class="card-image">
+            <img width="auto" height="auto" ng-src="{{game.image.small_url}}" alt="">
+          </div>
+          <br>
           <span class="card-title">GENERAL INFO</span>
           <ul>
-            <li>Name: {{ games[0].name }} </li>
-            <li>Original Release Date: {{ games[0].original_release_date | limitTo: 10 | date}} </li>
+            <li>Name: {{ game.name }} </li>
+            <br>
+            <li>Original Release Date: {{ game.original_release_date | limitTo: 10 | date}} </li>
+            <br>
             <li>Platforms:</li>
-            <li ng-repeat="platform in games[0].platforms"> {{ platform.name }} </li>
+            <li ng-repeat="platform in game.platforms"> {{ platform.name }} </li>
           </ul>
         </div>
           <div class="card-action">
@@ -19,26 +25,24 @@
       </div>
     </div>
 
+
+
     <div class="col m6">
-      <div ng-show="games[0].image">
+      <div ng-show="game.image">
         <div class="card grey darken-3">
-          <div class="card-image">
-            <img width="auto" height="100" ng-src="{{games[0].image.small_url}}" alt="">
-          </div>
           <div class="card-stacked">
           <div class="card-content white-text">
-            <h4> {{ games[0].name }} </h4>
+            <h4> {{ game.name }} </h4>
           </div>
-          <div class="card-action">
+          <!-- <div class="card-action">
             <a href="#">MORE INFO</a>
-          </div>
+          </div> -->
           </div>
         </div>
       </div>
       <div class="card grey darken-3">
         <div class="card-content white-text">
-          <span class="card-title">Description</span>
-            <p ng-bind-html="games[0].description">
+            <p class="left-align" ng-bind-html="game.description">
               <!-- {{ games[0].description }}  -->
             </p>
               </div>
@@ -48,21 +52,23 @@
           </div>
       </div>
 
+
+
     <div class="col m3">
       <div class="card grey darken-3">
         <div class="card-content white-text">
           <span class="card-title">TOP 10 NEWS</span>
           <div class="collection">
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
-            <a href="#!" class="collection-item orange darken-4 white-text">Alvin</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
+            <a href="#!" class="collection-item orange darken-4 white-text">NEWS</a>
           </div>
             </div>
             <div class="card-action">
@@ -74,5 +80,5 @@
 
   </div>
 
-
+</div>
 <!-- </div> -->

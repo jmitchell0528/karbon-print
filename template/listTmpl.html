@@ -1,20 +1,30 @@
 
-<div class="container">
-
-  <div ng-show="list.image" ng-repeat="list in lists">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img width="auto" height="100" ng-src="{{list.image.small_url}}" alt="">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p> {{ list.name }} </p>
-        </div>
-        <div class="card-action">
-          <a href="#">MORE INFO</a>
-        </div>
-      </div>
+<div class="row">
+  <form class="transparent col s12 m6 l3 right">
+    <div class="input-field transparent">
+      <input id="search" type="search" required class="transparent" ng-model="gameFilter.name">
+      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      <i class="material-icons">close</i>
     </div>
-  </div>
+  </form>
+</div>
+
+<div class="container">
+    <div ng-show="list.image" ng-repeat="list in lists | filter: gameFilter">
+        <div class="card horizontal grey darken-3">
+            <div class="card-image">
+                <img width="auto" height="100" ng-src="{{list.image.small_url}}" alt="">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content white-text">
+                    <p> {{ list.name }} </p>
+                </div>
+                <div class="card-action row">
+                    <a ui-sref="game({id:list.id})">MORE INFO</a>
+                    <a class="waves-effect waves-orange darken-2 btn-flat right" onclick="Materialize.toast('TAG SENT!', 3000)">TAG AS A FRIEND</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

@@ -7,3 +7,8 @@
   bottom: 200px !important;
   z-index: 1;
 }
+#carousel-input-field {
+  width: 50%;
+  margin: 0 auto;
+  background: hsla(0, 0%, 100%, 0.5)
+}

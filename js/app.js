@@ -1,7 +1,7 @@
 angular.module("karbonPrint", ['ui.router'])
 
   .config(function ($stateProvider, $urlRouterProvider, $sceProvider) {
-    $sceProvider.enabled(false)
+    $sceProvider.enabled(false) // <-- makes the html descriptions work
     $urlRouterProvider.otherwise("/")
     $stateProvider
 
@@ -12,7 +12,7 @@ angular.module("karbonPrint", ['ui.router'])
       })
 
       .state('game', {
-        url: '/game',
+        url: '/game/:id',
         templateUrl: "../template/gameTmpl.html",
         controller: 'gameCtrl'
       })
@@ -24,7 +24,7 @@ angular.module("karbonPrint", ['ui.router'])
       })
 
       .state('list', {
-        url: '/list',
+        url: '/list/:id',
         templateUrl: "../template/listTmpl.html",
         controller: 'listCtrl'
       })
