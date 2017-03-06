@@ -20,6 +20,11 @@ angular.module("karbonPrint").controller("mainCtrl", function($scope, service, $
       $('#carousel-input-field').show()
     })
 
+    $('#carousel-input-field').dblclick(function(e){
+        $("#carousel-input-field").hide();
+        $('#carousel-button').show()
+      })
+
     // $('#go-to-lists') = function(str) {
     //   $state.go("/lists/" + str)
     // }
