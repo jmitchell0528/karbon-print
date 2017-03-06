@@ -7,25 +7,25 @@ angular.module("karbonPrint", ['ui.router'])
 
       .state('home', {
         url: '/',
-        templateUrl: "/template/homeTmpl.html",
+        templateUrl: "template/homeTmpl.html",
         controller: "mainCtrl"
       })
 
       .state('game', {
         url: '/game/:id',
-        templateUrl: "/template/gameTmpl.html",
+        templateUrl: "template/gameTmpl.html",
         controller: 'gameCtrl'
       })
 
       .state('user', {
         url: '/user',
-        templateUrl: "/template/userTmpl.html",
+        templateUrl: "template/userTmpl.html",
         controller: 'userCtrl'
       })
 
       .state('list', {
         url: '/list/:id',
-        templateUrl: "/template/listTmpl.html",
+        templateUrl: "template/listTmpl.html",
         controller: 'listCtrl'
       })
 
