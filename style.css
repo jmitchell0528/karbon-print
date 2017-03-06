@@ -12,12 +12,19 @@
 /*.carousel.carousel-slider {
   max-height: 400px;
 }*/
-
+.modal {
+  max-height: 90%
+}
+.modal.modal-fixed-footer {
+  height: 90%;
+  line-height: 1;
+}
 #carousel-input-field {
   width: 50%;
   margin: 0 auto;
-  background: hsla(0, 0%, 100%, 0.5)
+  background: hsla(0, 0%, 100%, 0.75)
 }
+
 
 /*@media (max-width: 680px) {
   body{background-color: purple;}
