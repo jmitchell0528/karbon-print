@@ -4,11 +4,24 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 200px !important;
+  bottom: 30% !important;
   z-index: 1;
 }
+
+/*adjust for height change, when certain width happens, set a max height, use media queries*/
+/*.carousel.carousel-slider {
+  max-height: 400px;
+}*/
+
 #carousel-input-field {
   width: 50%;
   margin: 0 auto;
   background: hsla(0, 0%, 100%, 0.5)
 }
+
+/*@media (max-width: 680px) {
+  body{background-color: purple;}
+  .carousel.carousel-slider {
+    max-height: 400px;
+  }
+}*/
