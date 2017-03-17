@@ -7,7 +7,9 @@
   bottom: 30% !important;
   z-index: 1;
 }
-
+#carousel-body{
+	max-height:90vh !important;
+}
 /*adjust for height change, when certain width happens, set a max height, use media queries*/
 /*.carousel.carousel-slider {
   max-height: 400px;
