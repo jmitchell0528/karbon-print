@@ -1,0 +1,54 @@
+<nav class="grey darken-3">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a ui-sref="home" class="brand-logo"><i class="material-icons">power_settings_new</i>KarbonPrint</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li><a ui-sref="home">Home</a></li> -->
+          <!-- <li><a ui-sref="game">Games</a></li> -->
+          <li><a ui-sref="list">Games</a></li>
+          <li><a ui-sref="user">Users</a></li>
+            <button data-target="modal1" class="modal-trigger waves-effect waves-light btn orange darken-4 white-text">SIGN IN/ JOIN</button>
+            <div id="modal1" class="black modal modal-fixed-footer">
+              <div class="modal-header">
+                <h1 class="center">Sign Up</h1>
+              </div>
+              <div class="modal-content">
+                <div class="row">
+
+                <div class="col s6">
+                  <label for="firstname">First name</label>
+                  <input type="text" placeholder="firstname" id="firstname">
+                </div>
+                <div class="col s6">
+                  <label for="lastname">Last name</label>
+                  <input type="text" placeholder="lastname" id="lastname">
+                </div>
+              </div>
+              <div class="row">
+
+              <div class="col s6">
+                <label for="email">Email</label>
+                <input type="text" placeholder="email" id="email">
+              </div>
+              <div class="col s6">
+                <label for="password">Password</label>
+                <input type="text" placeholder="password" id="password">
+              </div>
+              </div>
+            </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center">Sign Up/ Log In</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <!-- <li><a ui-sref="home">Home</a></li> -->
+      <!-- <li><a ui-sref="game">Games</a></li> -->
+      <li><a ui-sref="list">Games</a></li>
+      <li><a ui-sref="user">Users</a></li>
+    </ul>
+</div>
+</div>
+</nav>

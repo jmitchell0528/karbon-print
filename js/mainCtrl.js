@@ -2,7 +2,7 @@ angular.module("karbonPrint").controller("mainCtrl", function($scope, $state) {
  $scope.searchGames = function() {
    $state.go("list", {id: $scope.gameLists})
  }
-	$(document).ready(function(){
+	$scope.$on("$viewContentLoaded", function(){
 	  $('#carousel-input-field').hide()
 	  $('.carousel.carousel-slider').carousel({fullWidth: true})
 
